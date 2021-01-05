@@ -64,24 +64,6 @@ $ gcloud compute instances delete INSTANCE_NAME
 
 Interact with your cluster with `oc` while connected via ssh to your gcp instance. 
 
-### Updating the installer
-
-Tools can be updated right from the instance itself.
-
-Update the OpenShift installer from `https://github.com/openshift/installer.git` `master` using:
-
-```shell
-$ gcloud beta compute ssh --zone "us-east1-c" $INSTANCE --project "openshift-gce-devel"
-$ update-installer
-```
-
-Update the OpenShift installer from `https://github.com/repo-owner/installer.git` `branch` using:
-
-```shell
-$ gcloud beta compute ssh --zone "us-east1-c" $INSTANCE --project "openshift-gce-devel"
-$ update-installer repo-owner branch
-```
-
 ## Advanced usage
 
 It's possible to ignore all the defaults and helpers and simply use the image as a stable base for libvirt installer development.
